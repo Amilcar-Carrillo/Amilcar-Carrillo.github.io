@@ -1,118 +1,242 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="scroll-smooth">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Amílcar Carrillo | Lic. en Ciencia de Datos</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Amílcar Carrillo | Data Analytics & BI</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+  </style>
 </head>
-<body class="bg-gray-900 text-white font-sans">
+<body class="bg-slate-900 text-slate-200 antialiased selection:bg-blue-500 selection:text-white">
 
-    <nav class="p-6 flex justify-between items-center max-w-6xl mx-auto">
-        <h1 class="text-xl font-bold text-blue-400 tracking-wider">A. CARRILLO</h1>
-        <div class="space-x-4">
-            <a href="https://github.com/Gambitami" target="_blank" class="hover:text-blue-400 font-medium transition">GitHub</a>
+  <!-- NAVEGACIÓN -->
+  <nav class="sticky top-0 z-50 backdrop-blur-md bg-slate-900/80 border-b border-slate-800">
+    <div class="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
+      <span class="font-bold text-lg text-white tracking-tight">Amílcar Carrillo<span class="text-blue-500">.</span></span>
+      <div class="flex items-center gap-6 text-sm font-medium">
+        <a href="#habilidades" class="text-slate-400 hover:text-white transition">Habilidades</a>
+        <a href="#proyectos" class="text-slate-400 hover:text-white transition">Proyectos</a>
+        <a href="#contacto" class="px-4 py-2 rounded-lg bg-blue-600 hover:bg-blue-500 text-white font-semibold transition shadow-lg shadow-blue-500/20">Contacto</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <header class="relative py-20 px-6 border-b border-slate-800 overflow-hidden">
+    <div class="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(59,130,246,0.15),rgba(255,255,255,0))]"></div>
+    <div class="max-w-4xl mx-auto text-center">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-xs font-semibold mb-6">
+        <span class="inline-block w-2 h-2 rounded-full bg-blue-400 animate-pulse"></span>
+        Disponible para nuevos retos profesionales
+      </div>
+      <h1 class="text-4xl sm:text-6xl font-extrabold text-white tracking-tight leading-tight">
+        Amílcar Alejandro Carrillo Ponce
+      </h1>
+      <p class="mt-4 text-xl sm:text-2xl text-blue-400 font-medium">
+        Licenciado en Ciencia de Datos para Negocios
+      </p>
+      <p class="mt-6 text-base sm:text-lg text-slate-400 max-w-2xl mx-auto leading-relaxed">
+        Especialista en transformar datos complejos en soluciones estratégicas de negocio. Experiencia en optimización de ingresos recurrentes, pipelines ETL, modelado relacional y dashboards ejecutivos en Power BI y Tableau.
+      </p>
+      <div class="mt-8 flex flex-wrap justify-center gap-4">
+        <a href="https://www.linkedin.com/in/amilcar-carrillo/" target="_blank" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-blue-600 hover:bg-blue-500 text-white font-medium transition shadow-lg shadow-blue-600/25">
+          <i class="fa-brands fa-linkedin text-lg"></i> Perfil de LinkedIn
+        </a>
+        <a href="https://github.com/Amilcar-Carrillo" target="_blank" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-slate-800 hover:bg-slate-700 border border-slate-700 text-slate-200 font-medium transition">
+          <i class="fa-brands fa-github text-lg"></i> Repositorio GitHub
+        </a>
+        <a href="mailto:amilcp@outlook.com" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-slate-800 hover:bg-slate-700 border border-slate-700 text-slate-200 font-medium transition">
+          <i class="fa-solid fa-envelope text-lg"></i> Correo
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-5xl mx-auto px-6 py-16 space-y-20">
+
+    <!-- STACK TECNOLÓGICO -->
+    <section id="habilidades">
+      <div class="flex items-center gap-3 mb-8">
+        <div class="p-2 rounded-lg bg-blue-500/10 text-blue-400">
+          <i class="fa-solid fa-layer-group text-xl"></i>
         </div>
-    </nav>
-
-    <header class="py-20 text-center border-b border-gray-800 bg-gradient-to-b from-gray-900 to-gray-800">
-        <h2 class="text-4xl md:text-6xl font-extrabold mb-4 tracking-tight">
-            Amílcar Alejandro <span class="text-blue-500 text-nowrap text-3xl md:text-6xl">Carrillo Ponce</span>
-        </h2>
-        <p class="text-blue-400 text-2xl font-semibold mb-6 uppercase tracking-widest">
-            Licenciado en Ciencia de Datos
-        </p>
-        <p class="text-gray-400 text-xl max-w-2xl mx-auto px-4 leading-relaxed">
-            Especialista en transformar datos complejos en insights estratégicos mediante el uso de Python, SQL y herramientas avanzadas de análisis.
-        </p>
-    </header>
-
-    <section class="max-w-6xl mx-auto px-6 py-12">
-        <h3 class="text-2xl font-semibold mb-6 text-gray-300 flex items-center">
-            <i class="fas fa-tools mr-3 text-blue-500"></i> Habilidades Técnicas
-        </h3>
-        <div class="flex flex-wrap gap-4">
-            <div class="flex items-center bg-gray-800 border border-gray-700 px-4 py-2 rounded-lg hover:border-blue-500 transition cursor-default">
-                <i class="fab fa-python text-yellow-400 mr-2"></i>
-                <span>Python (Pandas, Numpy)</span>
-            </div>
-            <div class="flex items-center bg-gray-800 border border-gray-700 px-4 py-2 rounded-lg hover:border-blue-500 transition cursor-default">
-                <i class="fas fa-database text-blue-400 mr-2"></i>
-                <span>SQL (PostgreSQL, MySQL)</span>
-            </div>
-            <div class="flex items-center bg-gray-800 border border-gray-700 px-4 py-2 rounded-lg hover:border-blue-500 transition cursor-default">
-                <i class="fas fa-chart-pie text-green-400 mr-2"></i>
-                <span>Visualización (Matplotlib, Seaborn)</span>
-            </div>
-            <div class="flex items-center bg-gray-800 border border-gray-700 px-4 py-2 rounded-lg hover:border-blue-500 transition cursor-default">
-                <i class="fas fa-file-excel text-green-600 mr-2"></i>
-                <span>Excel Avanzado</span>
-            </div>
+        <div>
+          <h2 class="text-2xl font-bold text-white">Stack Tecnológico</h2>
+          <p class="text-sm text-slate-400">Herramientas y plataformas aplicadas en proyectos de datos y analítica</p>
         </div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <div class="p-5 rounded-xl bg-slate-800/60 border border-slate-700/60 hover:border-slate-600 transition">
+          <div class="flex items-center gap-3 text-blue-400 mb-3">
+            <i class="fa-solid fa-database text-lg"></i>
+            <h3 class="font-semibold text-white">Bases de Datos & SQL</h3>
+          </div>
+          <p class="text-sm text-slate-400">PostgreSQL, MySQL, T-SQL, MariaDB. Consultas analíticas complejas, agregaciones y optimización de esquemas relacionales.</p>
+        </div>
+
+        <div class="p-5 rounded-xl bg-slate-800/60 border border-slate-700/60 hover:border-slate-600 transition">
+          <div class="flex items-center gap-3 text-cyan-400 mb-3">
+            <i class="fa-solid fa-chart-pie text-lg"></i>
+            <h3 class="font-semibold text-white">BI & Visualización</h3>
+          </div>
+          <p class="text-sm text-slate-400">Power BI (DAX, Power Query), Tableau (Desktop, Public), Looker Studio. Tableros ejecutivos y KPIs de negocio.</p>
+        </div>
+
+        <div class="p-5 rounded-xl bg-slate-800/60 border border-slate-700/60 hover:border-slate-600 transition">
+          <div class="flex items-center gap-3 text-emerald-400 mb-3">
+            <i class="fa-solid fa-code text-lg"></i>
+            <h3 class="font-semibold text-white">ETL & Programación</h3>
+          </div>
+          <p class="text-sm text-slate-400">Python (Pandas, NumPy, Scipy), Pentaho Data Integration (Spoon), automatización de procesos y Git/GitHub.</p>
+        </div>
+
+        <div class="p-5 rounded-xl bg-slate-800/60 border border-slate-700/60 hover:border-slate-600 transition">
+          <div class="flex items-center gap-3 text-amber-400 mb-3">
+            <i class="fa-solid fa-cloud text-lg"></i>
+            <h3 class="font-semibold text-white">Cloud & Plataformas</h3>
+          </div>
+          <p class="text-sm text-slate-400">AWS (S3, Athena, Glue, EC2), Google Cloud Platform (GCP) y Microsoft Azure para soluciones analíticas.</p>
+        </div>
+
+      </div>
     </section>
 
-    <main class="max-w-6xl mx-auto px-6 py-12">
-        <h3 class="text-2xl font-semibold mb-8 text-gray-300 flex items-center">
-            <i class="fas fa-project-diagram mr-3 text-blue-500"></i> Proyectos Seleccionados
-        </h3>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            
-            <div class="bg-gray-800 p-6 rounded-xl border border-gray-700 hover:border-blue-500 transition-all duration-300 shadow-xl group">
-                <h4 class="text-2xl font-bold mb-2 text-blue-300 group-hover:text-blue-400 transition">Proyecto: TT</h4>
-                <p class="text-gray-400 mb-6 leading-relaxed italic">
-                    Portafolio enfocado en proyectos de Ciencia de Datos. Implementaciones con <strong>Python y SQL</strong> orientadas a la limpieza, análisis exploratorio (EDA) y estructuración de datos.
-                </p>
-                <div class="flex flex-wrap gap-4 mt-auto">
-                    <a href="https://github.com/Gambitami/TT" target="_blank" class="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded text-sm font-bold transition flex items-center">
-                        <i class="fab fa-github mr-2"></i> Código Fuente
-                    </a>
-                    <a href="https://gambitami.github.io/TT/" target="_blank" class="bg-gray-700 hover:bg-gray-600 px-4 py-2 rounded text-sm font-bold transition flex items-center">
-                        <i class="fas fa-external-link-alt mr-2"></i> Ver Demo
-                    </a>
-                </div>
-            </div>
-
-            <div class="bg-gray-800 p-6 rounded-xl border border-gray-700 hover:border-green-500 transition-all duration-300 shadow-xl group">
-                <div class="flex justify-between items-start mb-4">
-                    <h4 class="text-2xl font-bold text-green-400 group-hover:text-green-300 transition uppercase tracking-tighter text-nowrap">BI & Control Financiero</h4>
-                    <span class="bg-green-900 text-green-300 text-[10px] px-2 py-1 rounded font-bold uppercase tracking-widest">Excel / BI</span>
-                </div>
-                <p class="text-gray-400 mb-6 leading-relaxed">
-                    Sistema integral para empresa en EE.UU. Control de <strong>rentabilidad, nómina y retención de clientes (Churn)</strong> con reportes automáticos por periodos.
-                </p>
-                <div class="flex flex-wrap gap-4 mt-auto">
-                    <a href="https://github.com/Gambitami/Business-Intelligence-Excel" target="_blank" class="bg-green-600 hover:bg-green-700 px-4 py-2 rounded text-sm font-bold transition flex items-center text-white">
-                        <i class="fas fa-chart-line mr-2"></i> Ver Caso de Estudio
-                    </a>
-                </div>
-            </div>
-
+    <!-- PROYECTOS DESTACADOS -->
+    <section id="proyectos">
+      <div class="flex items-center gap-3 mb-8">
+        <div class="p-2 rounded-lg bg-blue-500/10 text-blue-400">
+          <i class="fa-solid fa-diagram-project text-xl"></i>
         </div>
-    </main>
-
-    <section class="max-w-6xl mx-auto px-6 py-20 text-center border-t border-gray-800 bg-gray-900">
-        <h3 class="text-3xl font-bold mb-10">¿Te interesa mi perfil?</h3>
-        <div class="flex flex-col md:flex-row justify-center items-center gap-10">
-            <a href="mailto:amilcp@outlook.com" class="group flex items-center text-xl text-gray-300 hover:text-blue-400 transition">
-                <div class="bg-gray-800 p-3 rounded-full mr-4 group-hover:bg-blue-900 transition">
-                    <i class="fas fa-envelope text-blue-500"></i>
-                </div>
-                amilcp@outlook.com
-            </a>
-            <a href="https://www.linkedin.com/in/amilcar-alejandro-carrillo-ponce" target="_blank" class="group flex items-center text-xl text-gray-300 hover:text-blue-400 transition">
-                <div class="bg-gray-800 p-3 rounded-full mr-4 group-hover:bg-blue-900 transition">
-                    <i class="fab fa-linkedin text-blue-500"></i>
-                </div>
-                LinkedIn
-            </a>
+        <div>
+          <h2 class="text-2xl font-bold text-white">Proyectos Destacados</h2>
+          <p class="text-sm text-slate-400">Casos prácticos con impacto cuantitativo y arquitectura técnica completa</p>
         </div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+        <!-- Proyecto 1: Churn Analysis -->
+        <div class="p-6 rounded-2xl bg-slate-800/60 border border-slate-700/60 hover:border-blue-500/50 transition flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-3">
+              <span class="text-xs font-semibold px-2.5 py-1 rounded bg-blue-500/10 text-blue-400 border border-blue-500/20">Data Analytics / Finanzas</span>
+              <span class="text-xs text-slate-500">Kaggle / IBM</span>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-2">Customer Churn & Revenue Attrition Analysis</h3>
+            <p class="text-sm text-slate-400 leading-relaxed mb-4">
+              Auditoría sobre 7,000+ registros transaccionales para identificar patrones de abandono de clientes. Cuantificación de una fuga mensual de $139K USD en ingresos recurrentes (MRR) y formulación de estrategias de retención contractual.
+            </p>
+            <div class="flex flex-wrap gap-1.5 mb-6">
+              <span class="text-xs px-2 py-0.5 rounded bg-slate-700/70 text-slate-300">Python (Pandas)</span>
+              <span class="text-xs px-2 py-0.5 rounded bg-slate-700/70 text-slate-300">SQL Relacional</span>
+              <span class="text-xs px-2 py-0.5 rounded bg-slate-700/70 text-slate-300">Análisis MRR</span>
+            </div>
+          </div>
+          <a href="https://github.com/Amilcar-Carrillo/customer-churn-revenue-analysis" target="_blank" class="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-lg bg-blue-600/20 hover:bg-blue-600/30 text-blue-400 border border-blue-500/30 font-medium text-sm transition">
+            <i class="fa-brands fa-github"></i> Ver Repositorio y Documentación &rarr;
+          </a>
+        </div>
+
+        <!-- Proyecto 2: Data Lakehouse -->
+        <div class="p-6 rounded-2xl bg-slate-800/60 border border-slate-700/60 hover:border-blue-500/50 transition flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-3">
+              <span class="text-xs font-semibold px-2.5 py-1 rounded bg-amber-500/10 text-amber-400 border border-amber-500/20">Data Engineering / BI</span>
+              <span class="text-xs text-slate-500">Mundial 2026</span>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-2">Data Lakehouse: Monitor de Tráfico Aéreo</h3>
+            <p class="text-sm text-slate-400 leading-relaxed mb-4">
+              Pipeline serverless End-to-End para captura, estructuración y análisis de telemetría de vuelos comerciales en tiempo real sobre sedes mundialistas mexicanas, optimizando consultas mediante formato columnar Parquet.
+            </p>
+            <div class="flex flex-wrap gap-1.5 mb-6">
+              <span class="text-xs px-2 py-0.5 rounded bg-slate-700/70 text-slate-300">AWS S3 / Glue / Athena</span>
+              <span class="text-xs px-2 py-0.5 rounded bg-slate-700/70 text-slate-300">Python (Boto3)</span>
+              <span class="text-xs px-2 py-0.5 rounded bg-slate-700/70 text-slate-300">Power BI</span>
+            </div>
+          </div>
+          <a href="https://github.com/Amilcar-Carrillo/Data-Lakehouse-AWS-PowerBI-Vuelos" target="_blank" class="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-lg bg-blue-600/20 hover:bg-blue-600/30 text-blue-400 border border-blue-500/30 font-medium text-sm transition">
+            <i class="fa-brands fa-github"></i> Ver Repositorio &rarr;
+          </a>
+        </div>
+
+        <!-- Proyecto 3: Zuber Mobility Analysis -->
+        <div class="p-6 rounded-2xl bg-slate-800/60 border border-slate-700/60 hover:border-blue-500/50 transition flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-3">
+              <span class="text-xs font-semibold px-2.5 py-1 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">Estadística & SQL</span>
+              <span class="text-xs text-slate-500">Movilidad Urbana</span>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-2">Zuber: Análisis Estadístico de Movilidad</h3>
+            <p class="text-sm text-slate-400 leading-relaxed mb-4">
+              Integración de datos de viajes compartidos y clima en Chicago mediante SQL. Aplicación de pruebas de hipótesis estadísticas (T-test) para evaluar la variabilidad de tiempos de traslado bajo condiciones meteorológicas adversas.
+            </p>
+            <div class="flex flex-wrap gap-1.5 mb-6">
+              <span class="text-xs px-2 py-0.5 rounded bg-slate-700/70 text-slate-300">Python (Scipy, Pandas)</span>
+              <span class="text-xs px-2 py-0.5 rounded bg-slate-700/70 text-slate-300">SQL Queries</span>
+              <span class="text-xs px-2 py-0.5 rounded bg-slate-700/70 text-slate-300">Hypothesis Testing</span>
+            </div>
+          </div>
+          <a href="https://github.com/Amilcar-Carrillo/Zuber-Data-Engineering-Analysis" target="_blank" class="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-lg bg-blue-600/20 hover:bg-blue-600/30 text-blue-400 border border-blue-500/30 font-medium text-sm transition">
+            <i class="fa-brands fa-github"></i> Ver Repositorio &rarr;
+          </a>
+        </div>
+
+        <!-- Proyecto 4: BI Sterling & Draper -->
+        <div class="p-6 rounded-2xl bg-slate-800/60 border border-slate-700/60 hover:border-blue-500/50 transition flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-3">
+              <span class="text-xs font-semibold px-2.5 py-1 rounded bg-purple-500/10 text-purple-400 border border-purple-500/20">Business Intelligence</span>
+              <span class="text-xs text-slate-500">Marketing Analytics</span>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-2">Análisis de Tendencias y Audiencias Globales</h3>
+            <p class="text-sm text-slate-400 leading-relaxed mb-4">
+              Desarrollo de una solución de BI interactiva para analizar el comportamiento y segmentación de audiencias en 5 regiones, optimizando la asignación de presupuestos y reduciendo reportes estáticos manuales.
+            </p>
+            <div class="flex flex-wrap gap-1.5 mb-6">
+              <span class="text-xs px-2 py-0.5 rounded bg-slate-700/70 text-slate-300">Tableau Desktop</span>
+              <span class="text-xs px-2 py-0.5 rounded bg-slate-700/70 text-slate-300">Tableau Public</span>
+              <span class="text-xs px-2 py-0.5 rounded bg-slate-700/70 text-slate-300">Data Storytelling</span>
+            </div>
+          </div>
+          <a href="https://github.com/Amilcar-Carrillo/Analisis_Ventas_Tableau" target="_blank" class="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-lg bg-blue-600/20 hover:bg-blue-600/30 text-blue-400 border border-blue-500/30 font-medium text-sm transition">
+            <i class="fa-brands fa-github"></i> Ver Repositorio &rarr;
+          </a>
+        </div>
+
+      </div>
     </section>
 
-    <footer class="text-center py-10 border-t border-gray-800 bg-gray-950 text-gray-500 text-sm font-light">
-        <p>© 2026 Amílcar Alejandro Carrillo Ponce</p>
-        <p class="mt-2 text-xs opacity-50 uppercase tracking-widest">Ciencia de Datos | Analista</p>
-    </footer>
+    <!-- CONTACTO -->
+    <section id="contacto" class="p-8 rounded-2xl bg-gradient-to-br from-slate-800/90 to-slate-900 border border-slate-700 text-center">
+      <h2 class="text-2xl font-bold text-white mb-2">¿Conversamos sobre un proyecto o posición?</h2>
+      <p class="text-slate-400 text-sm max-w-xl mx-auto mb-6 leading-relaxed">
+        Estoy disponible para integrarme a equipos de analítica y business intelligence orientados a resultados y optimización operativa.
+      </p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="mailto:amilcp@outlook.com" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-blue-600 hover:bg-blue-500 text-white font-medium text-sm transition">
+          <i class="fa-solid fa-envelope"></i> amilcp@outlook.com
+        </a>
+        <a href="https://www.linkedin.com/in/amilcar-carrillo/" target="_blank" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-slate-800 hover:bg-slate-700 border border-slate-600 text-slate-200 font-medium text-sm transition">
+          <i class="fa-brands fa-linkedin"></i> Conectar en LinkedIn
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-slate-800 py-8 text-center text-xs text-slate-500">
+    <p>&copy; 2026 Amílcar Carrillo. Alojado en GitHub Pages.</p>
+  </footer>
 
 </body>
 </html>
