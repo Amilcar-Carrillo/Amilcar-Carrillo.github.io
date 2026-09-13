@@ -3,7 +3,8 @@
 Bienvenido a mi repositorio central. Aquí puedes explorar mis soluciones en **Business Intelligence**, **Data Analytics** y **Data Engineering**.
 
 [![Portfolio Web](https://img.shields.io/badge/Website-amilcar--carrillo.github.io-blue?style=flat&logo=google-chrome)](https://amilcar-carrillo.github.io/)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Amílcar_Carrillo-0A66C2?style=flat&logo=linkedin)](https://www.linkedin.com/)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Amílcar_Carrillo-0A66C2?style=flat&logo=linkedin)](https://www.linkedin.com/in/amilcar-carrillo/)
+[![Email](https://img.shields.io/badge/Email-amilcp%40outlook.com-D83B01?style=flat&logo=microsoft-outlook)](mailto:amilcp@outlook.com)
 [![GitHub](https://img.shields.io/badge/GitHub-Amilcar--Carrillo-181717?style=flat&logo=github)](https://github.com/Amilcar-Carrillo)
 
 Soy **Licenciado en Ciencia de Datos para Negocios** enfocado en transformar grandes volúmenes de datos en soluciones analíticas y decisiones estratégicas rentables. Mi experiencia abarca el ciclo de vida completo del dato: desde la extracción y modelado (ETL/ELT) hasta la creación de dashboards ejecutivos y auditoría transaccional.
@@ -15,7 +16,7 @@ Soy **Licenciado en Ciencia de Datos para Negocios** enfocado en transformar gra
 * **Business Intelligence & Visualización:** Power BI (DAX, Power Query), Tableau (Desktop, Public), Looker Studio.
 * **Bases de Datos & SQL:** PostgreSQL, MySQL, T-SQL, MariaDB (modelado dimensional, optimización de queries y vistas analíticas).
 * **Ingeniería de Datos & ETL:** Python (Pandas, NumPy, Scipy), Pentaho Data Integration (Spoon), Git & GitHub.
-* **Cloud & Infraestructura:** Amazon Web Services (S3, Athena, Glue, EC2).
+* **Cloud & Plataformas de Datos:** Microsoft Azure, Google Cloud Platform (GCP) y AWS.
 * **Análisis de Negocio:** Análisis financiero y de churn, conciliación transaccional, automatización de procesos operativos.
 
 ---
@@ -46,4 +47,6 @@ Soy **Licenciado en Ciencia de Datos para Negocios** enfocado en transformar gra
 
 ## 📬 Contacto
 * **Ubicación:** Ciudad de México
+* **Email:** [amilcp@outlook.com](mailto:amilcp@outlook.com)
+* **LinkedIn:** [linkedin.com/in/amilcar-carrillo](https://www.linkedin.com/in/amilcar-carrillo/)
 * **Portafolio:** [amilcar-carrillo.github.io](https://amilcar-carrillo.github.io/)
