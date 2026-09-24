@@ -1,3 +1,6 @@
+<p align="center">
+  <img src="FOTO%20PERFIL.png" alt="Amílcar Carrillo" width="160" style="border-radius: 50%;" />
+</p>
 # 🚀 Amílcar Carrillo | Data Engineer & Analytics Specialist
 
 Bienvenido a mi repositorio central. Aquí encontrarás arquitecturas y soluciones de extremo a extremo en **Data Engineering**, **Generative AI Data Pipelines (RAG)** y **Business Intelligence**.
