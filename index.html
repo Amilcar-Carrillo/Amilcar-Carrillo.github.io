@@ -1,252 +1,395 @@
 <!DOCTYPE html>
-<html lang="es" class="scroll-smooth">
+<html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Amílcar Carrillo | Data Analytics & BI</title>
-  <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <!-- Google Fonts: Inter -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Amílcar Carrillo | Data Engineer & Analytics Specialist</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <!-- FontAwesome Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
-    body { font-family: 'Inter', sans-serif; }
+    :root {
+      --bg: #0f172a;
+      --card-bg: #1e293b;
+      --card-hover: #273549;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --accent: #38bdf8;
+      --accent-green: #34d399;
+      --border: #334155;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', sans-serif;
+    }
+    body {
+      background-color: var(--bg);
+      color: var(--text-main);
+      line-height: 1.6;
+      padding: 40px 20px;
+    }
+    .container {
+      max-width: 1050px;
+      margin: 0 auto;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+    .profile-img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid var(--accent);
+      margin-bottom: 20px;
+      box-shadow: 0 4px 20px rgba(56, 189, 248, 0.2);
+    }
+    h1 {
+      font-size: 2.2rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    .subtitle {
+      font-size: 1.15rem;
+      color: var(--accent);
+      font-weight: 500;
+      margin-bottom: 16px;
+    }
+    .bio {
+      max-width: 750px;
+      margin: 0 auto 24px;
+      color: var(--text-muted);
+      font-size: 1rem;
+    }
+    .links {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+    .btn {
+      padding: 10px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.95rem;
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .btn-primary {
+      background-color: var(--accent);
+      color: #0f172a;
+    }
+    .btn-primary:hover {
+      background-color: #7dd3fc;
+      transform: translateY(-2px);
+    }
+    .btn-secondary {
+      background-color: var(--card-bg);
+      color: var(--text-main);
+      border: 1px solid var(--border);
+    }
+    .btn-secondary:hover {
+      background-color: var(--card-hover);
+      border-color: var(--accent);
+      transform: translateY(-2px);
+    }
+    section {
+      margin-bottom: 60px;
+    }
+    .section-title {
+      font-size: 1.6rem;
+      font-weight: 600;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .section-desc {
+      color: var(--text-muted);
+      margin-bottom: 30px;
+      font-size: 0.98rem;
+    }
+    .grid-stack {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 20px;
+    }
+    .stack-card {
+      background-color: var(--card-bg);
+      padding: 22px;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+    }
+    .stack-card h3 {
+      font-size: 1.1rem;
+      color: var(--accent);
+      margin-bottom: 10px;
+    }
+    .stack-card p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+    .grid-projects {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+    .project-card {
+      background-color: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 28px;
+      transition: all 0.25s ease;
+    }
+    .project-card:hover {
+      background-color: var(--card-hover);
+      border-color: var(--accent);
+    }
+    .project-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 12px;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .project-category {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent-green);
+      font-weight: 600;
+    }
+    .project-title {
+      font-size: 1.35rem;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+    .project-desc {
+      color: var(--text-muted);
+      font-size: 0.96rem;
+      margin-bottom: 18px;
+    }
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 20px;
+    }
+    .tag {
+      background-color: rgba(56, 189, 248, 0.1);
+      color: var(--accent);
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-size: 0.82rem;
+      font-weight: 500;
+    }
+    .project-actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .live-badge {
+      background-color: rgba(52, 211, 153, 0.15);
+      color: var(--accent-green);
+      border: 1px solid var(--accent-green);
+    }
+    footer {
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.88rem;
+      border-top: 1px solid var(--border);
+      padding-top: 30px;
+    }
   </style>
 </head>
-<body class="bg-slate-900 text-slate-200 antialiased selection:bg-blue-500 selection:text-white">
-
-  <!-- NAVEGACIÓN -->
-  <nav class="sticky top-0 z-50 backdrop-blur-md bg-slate-900/80 border-b border-slate-800">
-    <div class="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
-      <span class="font-bold text-lg text-white tracking-tight">Amílcar Carrillo<span class="text-blue-500">.</span></span>
-      <div class="flex items-center gap-6 text-sm font-medium">
-        <a href="#habilidades" class="text-slate-400 hover:text-white transition">Habilidades</a>
-        <a href="#proyectos" class="text-slate-400 hover:text-white transition">Proyectos</a>
-        <a href="#contacto" class="px-4 py-2 rounded-lg bg-blue-600 hover:bg-blue-500 text-white font-semibold transition shadow-lg shadow-blue-500/20">Contacto</a>
-      </div>
-    </div>
-  </nav>
-
-  <!-- HERO SECTION -->
-  <header class="relative py-20 px-6 border-b border-slate-800 overflow-hidden">
-    <div class="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(59,130,246,0.15),rgba(255,255,255,0))]"></div>
-    <div class="max-w-4xl mx-auto text-center">
-
-      <!-- FOTO DE PERFIL -->
-      <div class="flex justify-center mb-6">
-        <img 
-          src="FOTO%20PERFIL.png" 
-          alt="Amílcar Alejandro Carrillo Ponce" 
-          class="w-36 h-36 rounded-full object-cover border-4 border-blue-500 shadow-xl shadow-blue-500/20 hover:scale-105 transition-transform duration-300"
-        >
-      </div>
-
-      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-xs font-semibold mb-6">
-        <span class="inline-block w-2 h-2 rounded-full bg-blue-400 animate-pulse"></span>
-        Disponible para nuevos retos profesionales
-      </div>
-      <h1 class="text-4xl sm:text-6xl font-extrabold text-white tracking-tight leading-tight">
-        Amílcar Alejandro Carrillo Ponce
-      </h1>
-      <p class="mt-4 text-xl sm:text-2xl text-blue-400 font-medium">
-        Licenciado en Ciencia de Datos para Negocios
+<body>
+  <div class="container">
+    
+    <!-- HEADER -->
+    <header>
+      <img src="FOTO%20PERFIL.png" alt="Amílcar Carrillo" class="profile-img" onerror="this.style.display='none'">
+      <h1>Amílcar Alejandro Carrillo Ponce</h1>
+      <p class="subtitle">Licenciado en Ciencia de Datos para Negocios | Data Engineer & Analytics Specialist</p>
+      <p class="bio">
+        Especialista en el ciclo de vida del dato: desde ingestas crudas en arquitecturas Cloud (AWS / GCP / Azure) y transformaciones distribuidas (ETL/ELT), hasta bases de datos vectoriales para GenAI (RAG), modelado dimensional y tableros ejecutivos en Power BI y Tableau.
       </p>
-      <p class="mt-6 text-base sm:text-lg text-slate-400 max-w-2xl mx-auto leading-relaxed">
-        Especialista en transformar datos complejos en soluciones estratégicas de negocio. Experiencia en optimización de ingresos recurrentes, pipelines ETL, modelado relacional y dashboards ejecutivos en Power BI y Tableau.
-      </p>
-      <div class="mt-8 flex flex-wrap justify-center gap-4">
-        <a href="https://www.linkedin.com/in/amilcar-carrillo/" target="_blank" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-blue-600 hover:bg-blue-500 text-white font-medium transition shadow-lg shadow-blue-600/25">
-          <i class="fa-brands fa-linkedin text-lg"></i> Perfil de LinkedIn
-        </a>
-        <a href="https://github.com/Amilcar-Carrillo" target="_blank" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-slate-800 hover:bg-slate-700 border border-slate-700 text-slate-200 font-medium transition">
-          <i class="fa-brands fa-github text-lg"></i> Repositorio GitHub
-        </a>
-        <a href="mailto:amilcp@outlook.com" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-slate-800 hover:bg-slate-700 border border-slate-700 text-slate-200 font-medium transition">
-          <i class="fa-solid fa-envelope text-lg"></i> Correo
-        </a>
+      <div class="links">
+        <a href="https://www.linkedin.com/in/amilcar-carrillo/" target="_blank" class="btn btn-primary">Perfil de LinkedIn</a>
+        <a href="https://github.com/Amilcar-Carrillo" target="_blank" class="btn btn-secondary">Repositorio GitHub</a>
+        <a href="mailto:amilcp@outlook.com" class="btn btn-secondary">Correo Electrónico</a>
       </div>
-    </div>
-  </header>
-
-  <main class="max-w-5xl mx-auto px-6 py-16 space-y-20">
+    </header>
 
     <!-- STACK TECNOLÓGICO -->
-    <section id="habilidades">
-      <div class="flex items-center gap-3 mb-8">
-        <div class="p-2 rounded-lg bg-blue-500/10 text-blue-400">
-          <i class="fa-solid fa-layer-group text-xl"></i>
+    <section>
+      <h2 class="section-title">🛠️ Stack Tecnológico</h2>
+      <p class="section-desc">Herramientas y plataformas aplicadas en proyectos de ingeniería de datos, analítica y modelos de IA</p>
+      <div class="grid-stack">
+        <div class="stack-card">
+          <h3>Cloud & Data Lakehouses</h3>
+          <p>Google Cloud Platform (GCS, BigQuery), AWS (S3, Athena, Glue, EC2), Microsoft Azure.</p>
         </div>
-        <div>
-          <h2 class="text-2xl font-bold text-white">Stack Tecnológico</h2>
-          <p class="text-sm text-slate-400">Herramientas y plataformas aplicadas en proyectos de datos y analítica</p>
+        <div class="stack-card">
+          <h3>GenAI & Vector Stores</h3>
+          <p>RAG Pipelines, BigQuery Vector Search (ML.DISTANCE), Vertex AI (Gemini, text-embedding-004), LangChain.</p>
         </div>
-      </div>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        
-        <div class="p-5 rounded-xl bg-slate-800/60 border border-slate-700/60 hover:border-slate-600 transition">
-          <div class="flex items-center gap-3 text-blue-400 mb-3">
-            <i class="fa-solid fa-database text-lg"></i>
-            <h3 class="font-semibold text-white">Bases de Datos & SQL</h3>
-          </div>
-          <p class="text-sm text-slate-400">PostgreSQL, MySQL, T-SQL, MariaDB. Consultas analíticas complejas, agregaciones y optimización de esquemas relacionales.</p>
+        <div class="stack-card">
+          <h3>Data Engineering & ELT</h3>
+          <p>Python (Pandas, PySpark, Boto3), dbt (Data Build Tool), Apache Airflow, Docker, Pentaho PDI.</p>
         </div>
-
-        <div class="p-5 rounded-xl bg-slate-800/60 border border-slate-700/60 hover:border-slate-600 transition">
-          <div class="flex items-center gap-3 text-cyan-400 mb-3">
-            <i class="fa-solid fa-chart-pie text-lg"></i>
-            <h3 class="font-semibold text-white">BI & Visualización</h3>
-          </div>
-          <p class="text-sm text-slate-400">Power BI (DAX, Power Query), Tableau (Desktop, Public), Looker Studio. Tableros ejecutivos y KPIs de negocio.</p>
+        <div class="stack-card">
+          <h3>Bases de Datos & SQL</h3>
+          <p>PostgreSQL, BigQuery, AWS Athena, MySQL, T-SQL, MariaDB, MongoDB (NoSQL).</p>
         </div>
-
-        <div class="p-5 rounded-xl bg-slate-800/60 border border-slate-700/60 hover:border-slate-600 transition">
-          <div class="flex items-center gap-3 text-emerald-400 mb-3">
-            <i class="fa-solid fa-code text-lg"></i>
-            <h3 class="font-semibold text-white">ETL & Programación</h3>
-          </div>
-          <p class="text-sm text-slate-400">Python (Pandas, NumPy, Scipy), Pentaho Data Integration (Spoon), automatización de procesos y Git/GitHub.</p>
+        <div class="stack-card">
+          <h3>BI & Visualización</h3>
+          <p>Power BI (DAX, Power Query, Data Gateways), Tableau (Desktop, Public), Looker Studio.</p>
         </div>
-
-        <div class="p-5 rounded-xl bg-slate-800/60 border border-slate-700/60 hover:border-slate-600 transition">
-          <div class="flex items-center gap-3 text-amber-400 mb-3">
-            <i class="fa-solid fa-cloud text-lg"></i>
-            <h3 class="font-semibold text-white">Cloud & Plataformas</h3>
-          </div>
-          <p class="text-sm text-slate-400">AWS (S3, Athena, Glue, EC2), Google Cloud Platform (GCP) y Microsoft Azure para soluciones analíticas.</p>
-        </div>
-
       </div>
     </section>
 
     <!-- PROYECTOS DESTACADOS -->
-    <section id="proyectos">
-      <div class="flex items-center gap-3 mb-8">
-        <div class="p-2 rounded-lg bg-blue-500/10 text-blue-400">
-          <i class="fa-solid fa-diagram-project text-xl"></i>
-        </div>
-        <div>
-          <h2 class="text-2xl font-bold text-white">Proyectos Destacados</h2>
-          <p class="text-sm text-slate-400">Casos prácticos con impacto cuantitativo y arquitectura técnica completa</p>
-        </div>
-      </div>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-
-        <!-- Proyecto 1: Churn Analysis -->
-        <div class="p-6 rounded-2xl bg-slate-800/60 border border-slate-700/60 hover:border-blue-500/50 transition flex flex-col justify-between">
-          <div>
-            <div class="flex items-center justify-between gap-2 mb-3">
-              <span class="text-xs font-semibold px-2.5 py-1 rounded bg-blue-500/10 text-blue-400 border border-blue-500/20">Data Analytics / Finanzas</span>
-              <span class="text-xs text-slate-500">Kaggle / IBM</span>
-            </div>
-            <h3 class="text-xl font-bold text-white mb-2">Customer Churn & Revenue Attrition Analysis</h3>
-            <p class="text-sm text-slate-400 leading-relaxed mb-4">
-              Auditoría sobre 7,000+ registros transaccionales para identificar patrones de abandono de clientes. Cuantificación de una fuga mensual de $139K USD en ingresos recurrentes (MRR) y formulación de estrategias de retención contractual.
-            </p>
-            <div class="flex flex-wrap gap-1.5 mb-6">
-              <span class="text-xs px-2 py-0.5 rounded bg-slate-700/70 text-slate-300">Python (Pandas)</span>
-              <span class="text-xs px-2 py-0.5 rounded bg-slate-700/70 text-slate-300">SQL Relacional</span>
-              <span class="text-xs px-2 py-0.5 rounded bg-slate-700/70 text-slate-300">Análisis MRR</span>
-            </div>
+    <section>
+      <h2 class="section-title">📂 Proyectos Destacados</h2>
+      <p class="section-desc">Casos prácticos de extremo a extremo con impacto en negocio, arquitectura escalable y código fuente documentado</p>
+      
+      <div class="grid-projects">
+        
+        <!-- PROYECTO 1: RAG GCP -->
+        <div class="project-card">
+          <div class="project-header">
+            <span class="project-category">Generative AI / Cloud Data Engineering</span>
           </div>
-          <a href="https://github.com/Amilcar-Carrillo/customer-churn-revenue-analysis" target="_blank" class="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-lg bg-blue-600/20 hover:bg-blue-600/30 text-blue-400 border border-blue-500/30 font-medium text-sm transition">
-            <i class="fa-brands fa-github"></i> Ver Repositorio y Documentación &rarr;
-          </a>
+          <h3 class="project-title">Enterprise RAG Data Pipeline on Google Cloud Platform</h3>
+          <p class="project-desc">
+            Arquitectura de datos para IA Generativa sobre políticas corporativas. Ingesta no estructurada en Cloud Storage, segmentación con Recursive Chunking y metadatos de gobernanza, embeddings densos de 768 dimensiones con Vertex AI y búsqueda vectorial en BigQuery por similitud coseno (ML.DISTANCE), mitigando alucinaciones con Guardrails estrictos.
+          </p>
+          <div class="tags">
+            <span class="tag">GCP (Cloud Storage & BigQuery)</span>
+            <span class="tag">Vertex AI (Gemini & text-embedding-004)</span>
+            <span class="tag">BigQuery Vector Search</span>
+            <span class="tag">LangChain</span>
+            <span class="tag">Streamlit</span>
+          </div>
+          <div class="project-actions">
+            <a href="https://gcp-rag-asistente.streamlit.app/" target="_blank" class="btn btn-secondary live-badge">🚀 Probar Asistente en Vivo</a>
+            <a href="https://github.com/Amilcar-Carrillo/gcp-rag-data-pipeline" target="_blank" class="btn btn-secondary">Ver Repositorio y Arquitectura →</a>
+          </div>
         </div>
 
-        <!-- Proyecto 2: Data Lakehouse -->
-        <div class="p-6 rounded-2xl bg-slate-800/60 border border-slate-700/60 hover:border-blue-500/50 transition flex flex-col justify-between">
-          <div>
-            <div class="flex items-center justify-between gap-2 mb-3">
-              <span class="text-xs font-semibold px-2.5 py-1 rounded bg-amber-500/10 text-amber-400 border border-amber-500/20">Data Engineering / BI</span>
-              <span class="text-xs text-slate-500">Mundial 2026</span>
-            </div>
-            <h3 class="text-xl font-bold text-white mb-2">Data Lakehouse: Monitor de Tráfico Aéreo</h3>
-            <p class="text-sm text-slate-400 leading-relaxed mb-4">
-              Pipeline serverless End-to-End para captura, estructuración y análisis de telemetría de vuelos comerciales en tiempo real sobre sedes mundialistas mexicanas, optimizando consultas mediante formato columnar Parquet.
-            </p>
-            <div class="flex flex-wrap gap-1.5 mb-6">
-              <span class="text-xs px-2 py-0.5 rounded bg-slate-700/70 text-slate-300">AWS S3 / Glue / Athena</span>
-              <span class="text-xs px-2 py-0.5 rounded bg-slate-700/70 text-slate-300">Python (Boto3)</span>
-              <span class="text-xs px-2 py-0.5 rounded bg-slate-700/70 text-slate-300">Power BI</span>
-            </div>
+        <!-- PROYECTO 2: VUELOS AWS -->
+        <div class="project-card">
+          <div class="project-header">
+            <span class="project-category">Data Lakehouse / Telemetría en Tiempo Real</span>
           </div>
-          <a href="https://github.com/Amilcar-Carrillo/Data-Lakehouse-AWS-PowerBI-Vuelos" target="_blank" class="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-lg bg-blue-600/20 hover:bg-blue-600/30 text-blue-400 border border-blue-500/30 font-medium text-sm transition">
-            <i class="fa-brands fa-github"></i> Ver Repositorio &rarr;
-          </a>
+          <h3 class="project-title">Data Lakehouse: Monitor de Tráfico Aéreo (Sedes Mundialistas 2026)</h3>
+          <p class="project-desc">
+            Pipeline serverless híbrido End-to-End para captura, estructuración y análisis de telemetría de vuelos comerciales en tiempo real sobre sedes mundialistas mexicanas, optimizando almacenamiento de JSON a formato columnar Parquet con AWS Glue (PySpark), consultas federadas con Athena y actualización automatizada en Power BI Service.
+          </p>
+          <div class="tags">
+            <span class="tag">AWS S3 / Glue (PySpark) / Athena</span>
+            <span class="tag">Python (Boto3 & Requests)</span>
+            <span class="tag">Power BI (Data Gateway)</span>
+            <span class="tag">Data Quality & Observabilidad</span>
+          </div>
+          <div class="project-actions">
+            <a href="https://github.com/Amilcar-Carrillo/Data-Lakehouse-AWS-PowerBI-Vuelos" target="_blank" class="btn btn-secondary">Ver Repositorio y Documentación →</a>
+          </div>
         </div>
 
-        <!-- Proyecto 3: Zuber Mobility Analysis -->
-        <div class="p-6 rounded-2xl bg-slate-800/60 border border-slate-700/60 hover:border-blue-500/50 transition flex flex-col justify-between">
-          <div>
-            <div class="flex items-center justify-between gap-2 mb-3">
-              <span class="text-xs font-semibold px-2.5 py-1 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">Estadística & SQL</span>
-              <span class="text-xs text-slate-500">Movilidad Urbana</span>
-            </div>
-            <h3 class="text-xl font-bold text-white mb-2">Zuber: Análisis Estadístico de Movilidad</h3>
-            <p class="text-sm text-slate-400 leading-relaxed mb-4">
-              Integración de datos de viajes compartidos y clima en Chicago mediante SQL. Aplicación de pruebas de hipótesis estadísticas (T-test) para evaluar la variabilidad de tiempos de traslado bajo condiciones meteorológicas adversas.
-            </p>
-            <div class="flex flex-wrap gap-1.5 mb-6">
-              <span class="text-xs px-2 py-0.5 rounded bg-slate-700/70 text-slate-300">Python (Scipy, Pandas)</span>
-              <span class="text-xs px-2 py-0.5 rounded bg-slate-700/70 text-slate-300">SQL Queries</span>
-              <span class="text-xs px-2 py-0.5 rounded bg-slate-700/70 text-slate-300">Hypothesis Testing</span>
-            </div>
+        <!-- PROYECTO 3: MODERN DATA PIPELINE DOCKER/AIRFLOW/DBT -->
+        <div class="project-card">
+          <div class="project-header">
+            <span class="project-category">Modern Data Stack / Medallion ELT</span>
           </div>
-          <a href="https://github.com/Amilcar-Carrillo/Zuber-Data-Engineering-Analysis" target="_blank" class="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-lg bg-blue-600/20 hover:bg-blue-600/30 text-blue-400 border border-blue-500/30 font-medium text-sm transition">
-            <i class="fa-brands fa-github"></i> Ver Repositorio &rarr;
-          </a>
+          <h3 class="project-title">End-to-End Modern Data Pipeline (ELT con Airflow, dbt y Docker)</h3>
+          <p class="project-desc">
+            Pipeline desacoplado para simulación de transacciones de e-commerce. Ingesta de eventos semiestructurados en MongoDB, replicación hacia Data Warehouse analítico en PostgreSQL, orquestación programada mediante DAGs de Apache Airflow y transformaciones dimensionales Medallion (Bronze/Silver/Gold) gobernadas mediante dbt.
+          </p>
+          <div class="tags">
+            <span class="tag">Apache Airflow</span>
+            <span class="tag">dbt (Data Build Tool)</span>
+            <span class="tag">Docker & Docker Compose</span>
+            <span class="tag">MongoDB (NoSQL)</span>
+            <span class="tag">PostgreSQL DW</span>
+          </div>
+          <div class="project-actions">
+            <a href="https://github.com/Amilcar-Carrillo/mega_elt_pipeline" target="_blank" class="btn btn-secondary">Ver Repositorio y Arquitectura →</a>
+          </div>
         </div>
 
-        <!-- Proyecto 4: BI Sterling & Draper -->
-        <div class="p-6 rounded-2xl bg-slate-800/60 border border-slate-700/60 hover:border-blue-500/50 transition flex flex-col justify-between">
-          <div>
-            <div class="flex items-center justify-between gap-2 mb-3">
-              <span class="text-xs font-semibold px-2.5 py-1 rounded bg-purple-500/10 text-purple-400 border border-purple-500/20">Business Intelligence</span>
-              <span class="text-xs text-slate-500">Marketing Analytics</span>
-            </div>
-            <h3 class="text-xl font-bold text-white mb-2">Análisis de Tendencias y Audiencias Globales</h3>
-            <p class="text-sm text-slate-400 leading-relaxed mb-4">
-              Desarrollo de una solución de BI interactiva para analizar el comportamiento y segmentación de audiencias en 5 regiones, optimizando la asignación de presupuestos y reduciendo reportes estáticos manuales.
-            </p>
-            <div class="flex flex-wrap gap-1.5 mb-6">
-              <span class="text-xs px-2 py-0.5 rounded bg-slate-700/70 text-slate-300">Tableau Desktop</span>
-              <span class="text-xs px-2 py-0.5 rounded bg-slate-700/70 text-slate-300">Tableau Public</span>
-              <span class="text-xs px-2 py-0.5 rounded bg-slate-700/70 text-slate-300">Data Storytelling</span>
-            </div>
+        <!-- PROYECTO 4: CHURN ANALYSIS -->
+        <div class="project-card">
+          <div class="project-header">
+            <span class="project-category">Data Analytics / Finanzas & Retención</span>
           </div>
-          <a href="https://github.com/Amilcar-Carrillo/Analisis_Ventas_Tableau" target="_blank" class="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-lg bg-blue-600/20 hover:bg-blue-600/30 text-blue-400 border border-blue-500/30 font-medium text-sm transition">
-            <i class="fa-brands fa-github"></i> Ver Repositorio &rarr;
-          </a>
+          <h3 class="project-title">Customer Churn & Revenue Attrition Analysis</h3>
+          <p class="project-desc">
+            Auditoría sobre 7,000+ registros transaccionales para identificar patrones de abandono de clientes. Cuantificación de una fuga mensual de $139K USD en ingresos recurrentes (MRR) y formulación de estrategias de retención y migración contractual.
+          </p>
+          <div class="tags">
+            <span class="tag">Python (Pandas)</span>
+            <span class="tag">SQL Relacional</span>
+            <span class="tag">Análisis MRR / FinOps</span>
+          </div>
+          <div class="project-actions">
+            <a href="https://github.com/Amilcar-Carrillo/customer-churn-revenue-analysis" target="_blank" class="btn btn-secondary">Ver Repositorio y Documentación →</a>
+          </div>
+        </div>
+
+        <!-- PROYECTO 5: ZUBER -->
+        <div class="project-card">
+          <div class="project-header">
+            <span class="project-category">Estadística Aplicada & SQL</span>
+          </div>
+          <h3 class="project-title">Zuber: Análisis Estadístico de Movilidad Urbana</h3>
+          <p class="project-desc">
+            Integración de datos de viajes compartidos y clima en Chicago mediante SQL. Aplicación de pruebas de hipótesis estadísticas (T-test) para evaluar la variabilidad de tiempos de traslado bajo condiciones meteorológicas adversas para soporte en toma de decisiones operativas.
+          </p>
+          <div class="tags">
+            <span class="tag">Python (Scipy, Pandas)</span>
+            <span class="tag">SQL Queries</span>
+            <span class="tag">Hypothesis Testing</span>
+          </div>
+          <div class="project-actions">
+            <a href="https://github.com/Amilcar-Carrillo/Zuber-Data-Engineering-Analysis" target="_blank" class="btn btn-secondary">Ver Repositorio →</a>
+          </div>
+        </div>
+
+        <!-- PROYECTO 6: TABLEAU -->
+        <div class="project-card">
+          <div class="project-header">
+            <span class="project-category">Business Intelligence & Storytelling</span>
+          </div>
+          <h3 class="project-title">Análisis de Tendencias y Audiencias Globales</h3>
+          <p class="project-desc">
+            Desarrollo de una solución de BI interactiva para analizar el comportamiento y segmentación de audiencias en 5 regiones, optimizando la asignación de presupuestos y reduciendo la dependencia de reportes estáticos operativos.
+          </p>
+          <div class="tags">
+            <span class="tag">Tableau Desktop</span>
+            <span class="tag">Tableau Public</span>
+            <span class="tag">Data Storytelling</span>
+          </div>
+          <div class="project-actions">
+            <a href="https://github.com/Amilcar-Carrillo/Analisis_Ventas_Tableau" target="_blank" class="btn btn-secondary">Ver Repositorio →</a>
+          </div>
         </div>
 
       </div>
     </section>
 
-    <!-- CONTACTO -->
-    <section id="contacto" class="p-8 rounded-2xl bg-gradient-to-br from-slate-800/90 to-slate-900 border border-slate-700 text-center">
-      <h2 class="text-2xl font-bold text-white mb-2">¿Conversamos sobre un proyecto o posición?</h2>
-      <p class="text-slate-400 text-sm max-w-xl mx-auto mb-6 leading-relaxed">
-        Estoy disponible para integrarme a equipos de analítica y business intelligence orientados a resultados y optimización operativa.
-      </p>
-      <div class="flex flex-wrap justify-center gap-4">
-        <a href="mailto:amilcp@outlook.com" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-blue-600 hover:bg-blue-500 text-white font-medium text-sm transition">
-          <i class="fa-solid fa-envelope"></i> amilcp@outlook.com
-        </a>
-        <a href="https://www.linkedin.com/in/amilcar-carrillo/" target="_blank" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-slate-800 hover:bg-slate-700 border border-slate-600 text-slate-200 font-medium text-sm transition">
-          <i class="fa-brands fa-linkedin"></i> Conectar en LinkedIn
-        </a>
-      </div>
-    </section>
+    <!-- FOOTER -->
+    <footer>
+      <p>© 2026 Amílcar Alejandro Carrillo Ponce · Data Engineer & Analytics Specialist · Ciudad de México</p>
+    </footer>
 
-  </main>
-
-  <!-- FOOTER -->
-  <footer class="border-t border-slate-800 py-8 text-center text-xs text-slate-500">
-    <p>&copy; 2026 Amílcar Carrillo. Alojado en GitHub Pages.</p>
-  </footer>
-
+  </div>
 </body>
 </html>
