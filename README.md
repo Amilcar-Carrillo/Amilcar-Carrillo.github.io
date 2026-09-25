@@ -1,6 +1,7 @@
 <p align="center">
   <img src="FOTO%20PERFIL.png" alt="Amílcar Carrillo" width="160" style="border-radius: 50%;" />
 </p>
+
 # 🚀 Amílcar Carrillo | Data Engineer & Analytics Specialist
 
 Bienvenido a mi repositorio central. Aquí encontrarás arquitecturas y soluciones de extremo a extremo en **Data Engineering**, **Generative AI Data Pipelines (RAG)** y **Business Intelligence**.
@@ -33,8 +34,9 @@ Bienvenido a mi repositorio central. Aquí encontrarás arquitecturas y solucion
 
 ### 1. 🧠 [Enterprise RAG Data Pipeline on Google Cloud Platform](https://github.com/Amilcar-Carrillo/gcp-rag-data-pipeline)
 * **Enfoque:** Arquitectura de datos para Inteligencia Artificial Generativa (RAG) sobre gobernanza de políticas corporativas.
-* **Tech Stack:** `GCP (Cloud Storage, BigQuery Vector Search)` | `Vertex AI (Gemini 2.5, text-embedding-004)` | `Python` | `LangChain`
+* **Tech Stack:** `GCP (Cloud Storage, BigQuery Vector Search)` | `Vertex AI (Gemini, text-embedding-004)` | `Python` | `LangChain` | `Streamlit`
 * **Logro Clave:** Diseño de pipeline de datos no estructurados con *Recursive Chunking* y metadatos de auditoría; generación e indexación de vectores (768 dims) con búsqueda por similitud coseno en BigQuery (`ML.DISTANCE`) y control de alucinaciones con Guardrails estrictos.
+* **Demo en Vivo:** 🚀 [Probar Asistente Web](https://gcp-rag-asistente.streamlit.app/) | **Código:** [Ver Repositorio](https://github.com/Amilcar-Carrillo/gcp-rag-data-pipeline)
 
 ### 2. ✈️ [Data Lakehouse: Monitor de Tráfico Aéreo en Tiempo Real](https://github.com/Amilcar-Carrillo/Data-Lakehouse-AWS-PowerBI-Vuelos)
 * **Enfoque:** Arquitectura híbrida serverless de telemetría geoespacial en vivo para sedes mundialistas 2026.
