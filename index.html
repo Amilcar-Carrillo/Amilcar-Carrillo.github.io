@@ -229,12 +229,12 @@
 
     <!-- STACK TECNOLÓGICO -->
     <section>
-      <h2 class="section-title">🛠️ Stack Tecnológico</h2>
+      <h2 class="section-title">🛠️️ Stack Tecnológico</h2>
       <p class="section-desc">Herramientas y plataformas aplicadas en proyectos de ingeniería de datos, analítica y modelos de IA</p>
       <div class="grid-stack">
         <div class="stack-card">
           <h3>Cloud & Data Lakehouses</h3>
-          <p>Google Cloud Platform (GCS, BigQuery), AWS (S3, Athena, Glue, EC2), Microsoft Azure.</p>
+          <p>Google Cloud Platform (GCS, BigQuery, Cloud Run), AWS (S3, Athena, Glue, EC2), Microsoft Azure.</p>
         </div>
         <div class="stack-card">
           <h3>GenAI & Vector Stores</h3>
@@ -242,7 +242,7 @@
         </div>
         <div class="stack-card">
           <h3>Data Engineering & ELT</h3>
-          <p>Python (Pandas, PySpark, Boto3), dbt (Data Build Tool), Apache Airflow, Docker, Pentaho PDI.</p>
+          <p>Python (Pandas, PySpark, Boto3), Cloud Run Functions, Cloud Scheduler, dbt, Apache Airflow, Docker.</p>
         </div>
         <div class="stack-card">
           <h3>Bases de Datos & SQL</h3>
@@ -250,7 +250,7 @@
         </div>
         <div class="stack-card">
           <h3>BI & Visualización</h3>
-          <p>Power BI (DAX, Power Query, Data Gateways), Tableau (Desktop, Public), Looker Studio.</p>
+          <p>Streamlit, Looker Studio, Power BI (DAX, Power Query, Data Gateways), Tableau (Desktop, Public).</p>
         </div>
       </div>
     </section>
@@ -261,8 +261,31 @@
       <p class="section-desc">Casos prácticos de extremo a extremo con impacto en negocio, arquitectura escalable y código fuente documentado</p>
       
       <div class="grid-projects">
+
+        <!-- PROYECTO 1: CONGRESO CDMX MONITOR LEGISLATIVO & RAG -->
+        <div class="project-card">
+          <div class="project-header">
+            <span class="project-category">Generative AI / Cloud Data Engineering</span>
+          </div>
+          <h3 class="project-title">Serverless Data Pipeline, Hybrid RAG & Legislative Analytics</h3>
+          <p class="project-desc">
+            Plataforma integral de inteligencia parlamentaria sobre el Congreso de la CDMX (I, II y III Legislaturas). Ingesta serverless desatendida con Cloud Scheduler y Cloud Run Functions, data warehouse dimensional en BigQuery con inserciones idempotentes (MERGE), búsqueda semántica mediante embeddings densos de 768 dimensiones con Vertex AI (text-embedding-004), motor RAG híbrido cruzado con analítica SQL en tiempo real y mitigación de alucinaciones con Gemini.
+          </p>
+          <div class="tags">
+            <span class="tag">GCP (Cloud Run Functions & BigQuery)</span>
+            <span class="tag">Vertex AI (Gemini & text-embedding-004)</span>
+            <span class="tag">BigQuery Vector Search</span>
+            <span class="tag">Streamlit</span>
+            <span class="tag">Looker Studio</span>
+          </div>
+          <div class="project-actions">
+            <a href="https://congreso-cdmx-analytics.streamlit.app/" target="_blank" class="btn btn-secondary live-badge">🚀 Probar Asistente en Vivo</a>
+            <a href="https://datastudio.google.com/reporting/6d4edf9f-de42-4600-b6ce-a27a21b2ab05" target="_blank" class="btn btn-secondary">📊 Ver Tablero Looker Studio</a>
+            <a href="https://github.com/Amilcar-Carrillo/congreso-cdmx-analytics" target="_blank" class="btn btn-secondary">Ver Repositorio y Arquitectura →</a>
+          </div>
+        </div>
         
-        <!-- PROYECTO 1: RAG GCP -->
+        <!-- PROYECTO 2: RAG GCP -->
         <div class="project-card">
           <div class="project-header">
             <span class="project-category">Generative AI / Cloud Data Engineering</span>
@@ -284,7 +307,7 @@
           </div>
         </div>
 
-        <!-- PROYECTO 2: VUELOS AWS -->
+        <!-- PROYECTO 3: VUELOS AWS -->
         <div class="project-card">
           <div class="project-header">
             <span class="project-category">Data Lakehouse / Telemetría en Tiempo Real</span>
@@ -304,7 +327,7 @@
           </div>
         </div>
 
-        <!-- PROYECTO 3: MODERN DATA PIPELINE DOCKER/AIRFLOW/DBT -->
+        <!-- PROYECTO 4: MODERN DATA PIPELINE DOCKER/AIRFLOW/DBT -->
         <div class="project-card">
           <div class="project-header">
             <span class="project-category">Modern Data Stack / Medallion ELT</span>
@@ -325,7 +348,7 @@
           </div>
         </div>
 
-        <!-- PROYECTO 4: CHURN ANALYSIS -->
+        <!-- PROYECTO 5: CHURN ANALYSIS -->
         <div class="project-card">
           <div class="project-header">
             <span class="project-category">Data Analytics / Finanzas & Retención</span>
@@ -344,7 +367,7 @@
           </div>
         </div>
 
-        <!-- PROYECTO 5: ZUBER -->
+        <!-- PROYECTO 6: ZUBER -->
         <div class="project-card">
           <div class="project-header">
             <span class="project-category">Estadística Aplicada & SQL</span>
@@ -363,7 +386,7 @@
           </div>
         </div>
 
-        <!-- PROYECTO 6: TABLEAU -->
+        <!-- PROYECTO 7: TABLEAU -->
         <div class="project-card">
           <div class="project-header">
             <span class="project-category">Business Intelligence & Storytelling</span>
